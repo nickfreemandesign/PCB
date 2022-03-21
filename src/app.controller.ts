@@ -14,11 +14,6 @@ import { PCBComponentProperties } from './constants';
 export class AppController {
   constructor(private readonly PCBService: PCBService) {}
 
-  @Get()
-  getHello(): string {
-    return this.PCBService.determineComponent({});
-  }
-
   @Post()
   @HttpCode(202)
   isValidPCBComponent(@Body() PCBComponent: Body): HttpStatus | HttpException {

@@ -5,9 +5,11 @@ This is a nest.js application comprised of one endpoint which accepts POST reque
 
 Notes on Nest.JS
 
-There is a lot to appreciate with this framework and it appears to have everything you need– including things you didn't know you needed. 
+There is a lot to appreciate with this framework and it appears to have everything you need– including things you didn't know you needed. I have this feeling that devs who enjoy Angular feel right at home. 
 
-Never having used Nest.JS, I toggled between reading the documentation carefully, and just getting something built. I was rather surprised to find out that this framework is default built on top of express.js. 
+Never having used Nest.JS, I toggled between reading the documentation carefully, and just getting something built. I was rather surprised to find out that this framework is default built on top of express.js.
+
+Ultimately, I find this framework slow to do simple things (serve static assets, manipulate response statuses, isolate router logic, import a 3rd party library, etc) because there is such a right "nest" way of doing things. 
 
 ### Running the project
 
