@@ -20,19 +20,19 @@ export class PCBService {
   }
 
   public validateComponent(component, mandatoryProperties): boolean {
-    const hasTransistorProperties = mandatoryProperties
+    const hasProperties = mandatoryProperties
       .map(([property]) => component.hasOwnProperty(property))
       .every((itemExists) => itemExists);
 
-    if (!hasTransistorProperties) return false;
+    if (!hasProperties) return false;
 
-    const transitorPropertiesAreValid = mandatoryProperties
+    const propertiesAreValid = mandatoryProperties
       .map(([property, expectedType]) =>
         validateType(component[property], expectedType),
       )
       .every((itemIsValid) => itemIsValid);
 
-    if (!transitorPropertiesAreValid) return false;
+    if (!propertiesAreValid) return false;
 
     return true;
   }
